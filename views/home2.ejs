@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- <input id="img" type="file">
+    <input type="text" id="name">
+    <button onclick="uploadImage()" type="submit">Upload</button> -->
+
+
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <div>
+            <label>Upload profile picture</label>
+            <input type="file" name="image" required/>
+        </div>
+        <div>
+            <input type="submit" value="Upload" />
+        </div>
+    </form>
+</body>
+<script>
+    const uploadImage = async()=>{
+        console.log('s')
+        const image = await document.getElementById('img').files[0];
+        const name  = document.getElementById('name').value;
+        var data = await new FormData();
+        await data.append('file', image)
+        await data.append('type', image.type)
+        await data.append('name', Date.now())
+        console.log(data,image,'dd')
+        fetch('/upload',{
+            method:'post',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+    }
+    
+</script>
+</html>

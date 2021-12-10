@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFreez</title>
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="shortcut icon" href="/asset/code_freez-logos-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+  <body>
+    <!-- <input type="file" id="photo" />
+    <button onclick="uploadImage()">Upload Image</button> -->
+
+
+
+
+
+    <div class="__next">
+        <div class="topSection">
+            <div class="developers-header-container" data-test="homepage-header">
+                <div class="flexContainer" id="navbar">
+                    <div class="flexItemLogo">
+                        <a href="/" class="logo">
+                            <img src="/asset/code_freez-logos2.png" alt="CodeFreez logo">
+                        </a>
+                    </div>
+                    <div class="flexItemMenu">
+                        <div class="menu">
+                            <div class="menuitem">
+                                <a href="#" class="noStyle">
+                                    <div class="menuItemText">About</div>
+                                </a>
+                            </div>
+                            <div class="menuitem">
+                                <a href="#" class="noStyle">
+                                    <div class="menuItemText">Products</div>
+                                </a>
+                            </div>
+                            <div class="menuitem">
+                                <a href="#" class="noStyle">
+                                    <div class="menuItemText">Contact</div>
+                                </a>
+                            </div>
+                            <!-- <button class="button baseButton" data-test="header-login" onclick="window.location.href='login-form.html'">
+                                Login
+                            </button>
+                            <button class="button baseButton" data-test="header-signup">
+                                Signup
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="divide">
+
+        <div class="mainSection">
+            <div class="card">   
+                <div class="flip-card">
+                    <p>Upload</p>
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="asset/upload-icon-logo.jpg" alt="Avatar" style="width:30vw;      height:30vw;">
+                        </div>
+                        <div class="flip-card-back">
+                            <form action="" method="post">
+                                <input type="file" value="" id="upload-file"/>
+                                <input type="submit" value="Upload" id="upload-btn">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div>
+
+            <div class="card"> -->
+                <div class="flip-card">
+                    <p>Download</p>
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="asset/download-icon-logo.jpg" alt="Avatar" style="width:30vw;      height:30vw;">
+                        </div>
+                        <div class="flip-card-back">
+                            <form action="" method="get/post">
+                                <input type="text" value="" id="download-passcode" placeholder="Enter Passcode"/>
+                                <input type="submit" value="Download" id="download-btn">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divide">
+
+        <!-- <div class="countSection">
+
+        </div>
+
+        <hr class="divide"> -->
+
+        <div class="footerSection">
+            <div class="footer">
+                <div class="links details">
+                    <div class="footer-flexItemLogo">
+                        <a href="/" class="footer-logo">
+                            <img src="/asset/code_freez-logos2.png" alt="CodeFreez logo">
+                        </a>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="links more-links">
+                    <a href="about.html">About Us</a>
+                    <a href="#">Products</a>
+                </div>
+                <div class="links services-support">
+                    <a href="mailto:ayush1913085@akgec.ac.in">Technical Support</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <hr class="foot-hr">
+            <div class="copyright">
+                &copy;CodeFreez | All rights reserved | Terms of service | Privacy policy
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+  
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAbeMFG2-uGaQfASzywoGxm1_fNNGE6nXE",
+    authDomain: "codefreez-60655.firebaseapp.com",
+    projectId: "codefreez-60655",
+    storageBucket: "codefreez-60655.appspot.com",
+    messagingSenderId: "1084990192460",
+    appId: "1:1084990192460:web:37df9e7f189a4752aaede9",
+    measurementId: "G-2XS75GK1H7"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    console.log(firebase);
+
+    function uploadImage() {
+      const ref = firebase.storage().ref();
+      const file = document.querySelector("#photo").files[0];
+      const name = +new Date() + "-" + file.name;
+      const metadata = {
+        contentType: file.type
+      };
+      const task = ref.child(name).put(file, metadata);
+      task
+        .then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url => {
+          console.log(url);
+          document.querySelector("#image").src = url;
+        })
+        .catch(console.error);
+    }
+  </script>
+</html>
