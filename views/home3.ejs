@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +11,23 @@
     <link rel="stylesheet" href="./footer.css">
     <link rel="shortcut icon" href="/asset/code_freez-logos-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" />  
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
 </head>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- <input type="file" id="photo" />
     <button onclick="uploadImage()">Upload Image</button> -->
     <!-- Stream video via webcam -->
 
-      <!-- <input type="file" id="photo" />
+    <!-- <input type="file" id="photo" />
     <button onclick="uploadImage()">Upload Image</button> -->
 
 
-<!-- 
+    <!-- 
 
 
     <div class="__next">
@@ -61,7 +62,7 @@
                             <button class="button baseButton" data-test="header-signup">
                                 Signup
                             </button> -->
-                        <!-- </div>
+    <!-- </div>
                     </div>
                 </div>
             </div>
@@ -83,10 +84,10 @@
                         </div>
                     </div>
                 </div> -->
-            <!-- </div>
+    <!-- </div>
 
             <div class="card"> -->
-                <!-- <div class="flip-card">
+    <!-- <div class="flip-card">
                     <p>Download</p>
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -104,15 +105,15 @@
             </div>
         </div> -->
 
-        <!-- <hr class="divide"> -->
+    <!-- <hr class="divide"> -->
 
-        <!-- <div class="countSection">
+    <!-- <div class="countSection">
 
         </div>
 
         <hr class="divide"> -->
 
-        <!-- <div class="footerSection">
+    <!-- <div class="footerSection">
             <div class="footer">
                 <div class="links details">
                     <div class="footer-flexItemLogo">
@@ -142,44 +143,44 @@
     </div> -->
 
     <!-- <div id="home"> -->
-        <header class="hero" style="height: 100px">
-           <nav class="navbar">
-              <h1 class="logo">
-                 <a href="#"><span class="fas fa-mask"></span></a>
-              </h1>
-              <div>
-                 <!-- --------------------------------------
+    <header class="hero" style="height: 100px">
+        <nav class="navbar">
+            <h1 class="logo">
+                <a href="#"><span class="fas fa-mask"></span></a>
+            </h1>
+            <div>
+                <!-- --------------------------------------
                  -------- Hamburger Links ------------
                  --------------------------------------- -->
-                 <div class="nav-menu">
+                <div class="nav-menu">
                     <!-- Header icons -->
                     <a href="#premium" class="nav-link"><i class="fab nav-icon fa-"></i>Contact Us</a>
                     <a href="#contact" class="nav-link"><i class="fab nav-icon fa-"></i>Premium</a>
                     <a href="#docs" class="nav-link"><i class="fab nav-icon fa-docs"></i>Docs</a>
                     <a href="#signup" class="nav-link"><i class="fab nav-icon fa-signup"></i>SignUp</a>
                     <a href="#login" class="nav-link"><i class="fab nav-icon fa-login"></i>SignIn</a>
-                 </div>
-     
-                 <!-- --------------------------------------
+                </div>
+
+                <!-- --------------------------------------
                  ---------- Hamburger button ---------------
                  --------------------------------------- -->
-                 <div class="hamburger">
+                <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                 </div>
-              </div>
-           </nav>
-        </header>
-     
-        <!-- ? Optional Markup 
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ? Optional Markup 
         -------------------------------------------------------------------------------
         * This is just to demonstrate how each links moves to each section when clicked
         -------------------------------------------------------------------------------
         -->
-      
-     <!-- </div> -->
-     <div id="buttons">
+
+    <!-- </div> -->
+    <div id="buttons">
         <div id="upload_btn">
             <input type="file" id="photo" />
             <button id="up_btn" onclick="uploadImage()">Upload File</button>
@@ -189,147 +190,150 @@
         </div>
         <div id="passcode">
             <h3>Your Passcode is: <span id="passcodedigit"></span></h3>
-            <h3><%  %></h3>
+            <h3>
+                <% %>
+            </h3>
         </div>
         <div id="download_passcode">
-             <input id="download_passcode_input" type="number" placeholder="Code">
-             <button id="check_passcode" onclick="passcodedownload()">Get File</button>
-            
+            <input id="download_passcode_input" type="number" placeholder="Code">
+            <button id="check_passcode" onclick="passcodedownload()">Get File</button>
+
         </div>
         <div id="upload_btn">
-            
+
             <button id="down_btn" onclick="downloadImage()">Download File</button>
         </div>
-     </div>
-     
+    </div>
 
 
-  </body>
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
-  <script>
-      const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", mobileMenu);
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
+    hamburger.addEventListener("click", mobileMenu);
 
-const navLink = document.querySelectorAll(".nav-link");
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
 
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+    const navLink = document.querySelectorAll(".nav-link");
 
-function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-  </script>
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
 
-  <script>
-   const firebaseConfig = {
-    apiKey: "AIzaSyAbeMFG2-uGaQfASzywoGxm1_fNNGE6nXE",
-    authDomain: "codefreez-60655.firebaseapp.com",
-    projectId: "codefreez-60655",
-    storageBucket: "codefreez-60655.appspot.com",
-    messagingSenderId: "1084990192460",
-    appId: "1:1084990192460:web:37df9e7f189a4752aaede9",
-    measurementId: "G-2XS75GK1H7"
-  };
+</script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAbeMFG2-uGaQfASzywoGxm1_fNNGE6nXE",
+        authDomain: "codefreez-60655.firebaseapp.com",
+        projectId: "codefreez-60655",
+        storageBucket: "codefreez-60655.appspot.com",
+        messagingSenderId: "1084990192460",
+        appId: "1:1084990192460:web:37df9e7f189a4752aaede9",
+        measurementId: "G-2XS75GK1H7"
+    };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     console.log(firebase);
 
     function uploadImage() {
-        document.getElementById("file_status").innerText='Uploading File...'
-      const ref = firebase.storage().ref();
-      const file = document.querySelector("#photo").files[0];
-      const name = +new Date() + "-" + file.name;
-      const metadata = {
-        contentType: file.type
-      };
-      const task = ref.child(name).put(file, metadata);
-      task
-        .then(snapshot => snapshot.ref.getDownloadURL())
-        .then(url => {
-          console.log(url);
-          const rnd_num = Math.floor(100000 + Math.random() * 900000)
-          fetch('/uploadtodb',{
-              method:'post',
-              body:JSON.stringify({url:url,passcode:rnd_num}),
-              headers:{
-                  'content-type':'application/json'
-              }
-          }).then(()=>{ 
-              document.getElementById("file_status").innerHTML=`Uploaded Successfully <a href="${url}">View</a>`;
-          
-          //   document.getElementById("file_status").innerText='File Uploaded Successfully';
-          document.getElementById("passcode").style.display='block'
-            document.getElementById("passcodedigit").innerText=rnd_num;
-            document.getElementById('link').innerHTML=`<a href = "${url}" download>Download Now</a>`
-            
-            document.getElementById('link').src = url;
+        document.getElementById("file_status").innerText = 'Uploading File...'
+        const ref = firebase.storage().ref();
+        const file = document.querySelector("#photo").files[0];
+        const name = +new Date() + "-" + file.name;
+        const metadata = {
+            contentType: file.type
+        };
+        const task = ref.child(name).put(file, metadata);
+        task
+            .then(snapshot => snapshot.ref.getDownloadURL())
+            .then(url => {
+                console.log(url);
+                const rnd_num = Math.floor(100000 + Math.random() * 900000)
+                fetch('/uploadtodb', {
+                    method: 'post',
+                    body: JSON.stringify({ url: url, passcode: rnd_num }),
+                    headers: {
+                        'content-type': 'application/json'
+                    }
+                }).then(() => {
+                    document.getElementById("file_status").innerHTML = `Uploaded Successfully <a href="${url}">View</a>`;
 
-          }).catch(console.log('Something went wrong'))
-         
-        })
-        .catch(console.log('error'));
+                    //   document.getElementById("file_status").innerText='File Uploaded Successfully';
+                    document.getElementById("passcode").style.display = 'block'
+                    document.getElementById("passcodedigit").innerText = rnd_num;
+                    document.getElementById('link').innerHTML = `<a href = "${url}" download>Download Now</a>`
+
+                    document.getElementById('link').src = url;
+
+                }).catch(console.log('Something went wrong'))
+
+            })
+            .catch(console.log('error'));
     }
-    function downloadImage(){
-        document.getElementById('passcode').style.display='none'
-        document.getElementById("file_status").style.display='none'
-        document.getElementById("download_passcode").style.display='block'
+    function downloadImage() {
+        document.getElementById('passcode').style.display = 'none'
+        document.getElementById("file_status").style.display = 'none'
+        document.getElementById("download_passcode").style.display = 'block'
     }
-    function passcodedownload(){
+    function passcodedownload() {
         const pass = document.getElementById('download_passcode_input').value;
-        fetch('/getfromdb',{
-              method:'post',
-              body:JSON.stringify({passcode:pass}),
-              headers:{
-                  'content-type':'application/json'
-              }
-          }).then((data)=>{ 
-              return data.json()
-              
+        fetch('/getfromdb', {
+            method: 'post',
+            body: JSON.stringify({ passcode: pass }),
+            headers: {
+                'content-type': 'application/json'
+            }
+        }).then((data) => {
+            return data.json()
 
-          }).then((data)=>{
-            window.location.href=`${data.url}`
-          })
-         
+
+        }).then((data) => {
+            window.location.href = `${data.url}`
+        })
+
     }
 
 
-// Success
-function handleSuccess(stream) {
-  window.stream = stream;
-  video.srcObject = stream;
-}
+    // Success
+    function handleSuccess(stream) {
+        window.stream = stream;
+        video.srcObject = stream;
+    }
 
-// Load init
-init();
+    // Load init
+    init();
 
-// Draw image
-var context = canvas.getContext('2d');
-snap.addEventListener("click", function() {
-    context.drawImage(video, 0, 0, 640, 480);
-    var image = new Image();
-image.id = "pic";
-image.src = canvas.toDataURL();
-console.log(image.src)
-var button = document.createElement('button')
-button.textContent = 'Upload Image'
-document.body.appendChild(button)
+    // Draw image
+    var context = canvas.getContext('2d');
+    snap.addEventListener("click", function () {
+        context.drawImage(video, 0, 0, 640, 480);
+        var image = new Image();
+        image.id = "pic";
+        image.src = canvas.toDataURL();
+        console.log(image.src)
+        var button = document.createElement('button')
+        button.textContent = 'Upload Image'
+        document.body.appendChild(button)
 
-button.onclick = function() {
-    const ref = firebase.storage().ref();
-    ref.child(new Date() + '-' + 'base64').putString(image.src, 'data_url').then(function(snapshot) {
-    console.log('Uploaded a data_url string!');
-    alert("Image Uploaded")
-});
-}
-});
-  </script>
+        button.onclick = function () {
+            const ref = firebase.storage().ref();
+            ref.child(new Date() + '-' + 'base64').putString(image.src, 'data_url').then(function (snapshot) {
+                console.log('Uploaded a data_url string!');
+                alert("Image Uploaded")
+            });
+        }
+    });
+</script>
+
 </html>
